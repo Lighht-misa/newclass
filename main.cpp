@@ -1,21 +1,9 @@
-#include "InterView.h"
 #include <iostream>
-class Myclass {
-private:
-	int value;
-public:
-	Myclass& setValue(int value)
-	{
-		this->value = value;
-		return *this;
-	}
-};
-
-
-int main() {
-	innnerB n1;
-	WrapperC w1;
-	Myclass Obeject;
-	DefaultClass d,c,e,f;
-	std::cout << d<<c<<e<<f;
+#include "Student.h"
+int main()
+{
+	Student s1("gd",1,18);
+	std::cout << "s1's name :" << s1.getname() << " ";
+	std::cout << "s1's num : " << s1.getage() << " ";
+	std::cout << "s1's age : " << s1.getnum() << " ";
 }
