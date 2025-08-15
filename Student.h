@@ -1,26 +1,13 @@
+#pragma once
 #include <iostream>
-#include <string>
-#include<thread>
-class Student {
+class Student
+{
+private:
+	std::string name;
+	int age;
 public:
 	Student();
-	Student(const std::string& s, const int& num, const int& age);
-	Student(const Student&s);
-	Student(Student&& s);
-	~Student();
+	void setname(const std::string& S);
 	std::string getname();
-	int getnum();
-	int getage();
-
-	static void Textstatic();
-
-	Student& operator=(const Student& s);
-private:
-	int* _data = new int();
-	std::thread _thread;
-	std::string _name;
-	int* data;
-	int _num;
-	int _age;
-	static int _money;
 };
+
