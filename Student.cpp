@@ -1,8 +1,18 @@
 #include "Student.h"
-Student::Student() :name("laohu"), age(18) {}
-void Student::setname(const std::string& S) {
-	this->name = S;
+#include <iostream>
+Student::Student():name("laohu"),age(18){
+
 }
+Student::Student(const Student& s):name(s.name),age(s.age){
+
+}
+Student::Student(std::string name, int age):name(name),age(age){
+
+}
+
 std::string Student::getname() {
 	return name;
+}
+int Student::getage() {
+	return age;
 }
